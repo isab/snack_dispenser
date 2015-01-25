@@ -6,7 +6,7 @@ body{
 
 #snacknav{
 	top: 200px;
-	left: 250px;
+	left: 260px;
 	width: 100px;
 	height: 200px;
 	border: 5px solid #ffffff;
@@ -26,7 +26,7 @@ body{
 
 #snackreel{
 	top: 200px;
-	left: 390px;
+	left: 400px;
 	width: 420px;
 	height: 220px;
 	border: 5px solid #45B8C1;
@@ -42,9 +42,10 @@ body{
 
 h1{
 	color: #ffffff;
-	font: 85px Verdana;
+	font: 85px Courier New;
 	letter-spacing: 3pt;
 	border-bottom: 10px solid #ffffff;
 	top: 100px;
-	left: 300px;
+	left: 260px;
+	width: 650;
 }
