@@ -1,10 +1,10 @@
 body{
 	background: #435B70;
-	color: #ffffff;
+	color: #000000;
 	font: 15px verdana;
 }
 
-.snacknav{
+#snacknav{
 	top: 200px;
 	right: 100px;
 	width: 100px;
@@ -13,7 +13,7 @@ body{
 	position: absolute;
 }
 
-.snackdisplay{
+#snackdisplay{
 	top: 200px;
 	left: 200px;
 	width: 100px;
@@ -23,7 +23,7 @@ body{
 	position: absolute;
 }
 
-.snackreel{
+#snackreel{
 	background: #ffffff;
 	top: 200px;
 	right: 251px;
@@ -31,5 +31,11 @@ body{
 	height: 200px;
 	border: 5px solid #45B8C1;
 	position: absolute;
+}
+
+.snack-img{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
 }
 
