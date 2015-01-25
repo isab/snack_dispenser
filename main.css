@@ -8,9 +8,9 @@ body{
 	top: 200px;
 	left: 260px;
 	width: 100px;
-	height: 200px;
+	height: 220px;
 	border: 5px solid #ffffff;
-	background: #9D669D;
+	background: #45B8C1;
 	position: absolute;
 }
 
@@ -41,11 +41,12 @@ body{
 }
 
 h1{
-	color: #ffffff;
+	color: #9D669D;
 	font: 85px Courier New;
 	letter-spacing: 3pt;
 	border-bottom: 10px solid #ffffff;
 	top: 100px;
 	left: 260px;
 	width: 650;
+	position: absolute;
 }
