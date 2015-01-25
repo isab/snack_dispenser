@@ -1,0 +1,19 @@
+body{
+	color: #000000;
+	font: 15px verdana;
+}
+
+.snacknav{
+	margin-right: 70px;
+}
+
+.snackdisplay{
+	margin-left: 70px;
+}
+
+.snackreel{
+	width: 400px;
+	height: 200px;
+	border: 5px solid #ff6600;
+}
+
