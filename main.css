@@ -41,12 +41,13 @@ body{
 }
 
 h1{
-	color: #9D669D;
+	color: #ffffff;
 	font: 85px Courier New;
 	letter-spacing: 3pt;
-	border-bottom: 10px solid #ffffff;
-	top: 100px;
+	border-bottom: 10px solid #9D669D;
+	top: 80px;
 	left: 260px;
-	width: 650;
+	width: 710;
 	position: absolute;
+	text-align: center;
 }
