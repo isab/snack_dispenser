@@ -36,23 +36,20 @@ function dispense(){
 	var snackIdx = randomSnack();
 	var snack = snacks[snackIdx];
 
-	displaySnack(snack);
+	snack.style.borderColor = "black";
 
 	if(outOfStock(snackIdx)){
 		window.alert("Item is out of stock! Click dispense to try again!");
-		removeSnack(snack);
 	}
 	else{
 		addToBag(snack);
 		var confirm = prompt("Keep the snack? (Y/N)");
 		if(confirm == "N"){
 			removeFromBag(snack);
-			removeSnack(snack);
 		}
 		if(confirm != "Y" && confirm != "N"){
 			window.alert("Invalid Answer. Dispense again.");
 			removeFromBag(snack);
-			removeSnack(snack);
 		}
 	}
 }
@@ -64,7 +61,7 @@ function randomSnack(){
 
 function displaySnack(snack){
 	var snackDisplay = document.getElementById("snacknav");
-    snackDisplay.appendChild(snack.src);
+    snackDisplay.appendChild(snack);
 }
 
 function removeSnack(snack){
