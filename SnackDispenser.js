@@ -39,25 +39,24 @@ function dispense(){
 	var snackDisplay = document.getElementById("snackdisplay");
     snackDisplay.appendChild(snack);
 
-   	var snackBag = document.getElementById("snackbag");
-
 	if(outOfStock(snackIdx)){
 		window.alert("Item is out of stock! Click dispense to try again!");
 		snackDisplay.removeChild(snack);
 	}
-	else{
-		snackBag.appendChild(snack);
-		var confirm = prompt("Keep the snack? (Y/N)");
-		if(confirm == "N"){
-			snackBag.removeChild(snack);
-			snackDisplay.removeChild(snack);
-		}
-		if(confirm != "Y" && confirm != "N"){
-			window.alert("Invalid Answer. Dispense again.");
-			snackBag.removeChild(snack);
-			snackDisplay.removeChild(snack);
-		}
-	}
+	// else{
+	// 	var snackBag = document.getElementById("snackbag");
+	// 	snackBag.appendChild(snack);
+	// 	var confirm = prompt("Keep the snack? (Y/N)");
+	// 	if(confirm == "N"){
+	// 		snackBag.removeChild(snack);
+	// 		snackDisplay.removeChild(snack);
+	// 	}
+	// 	if(confirm != "Y" && confirm != "N"){
+	// 		window.alert("Invalid Answer. Dispense again.");
+	// 		snackBag.removeChild(snack);
+	// 		snackDisplay.removeChild(snack);
+	// 	}
+	// }
 }
 
 function randomSnack(){
