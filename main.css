@@ -21,7 +21,7 @@ body{
 	background: #ffffff;
 	float: left;
 	margin-top: 50px;
-	margin-left: 20px;
+	margin-left: 400px;
 }
 
 .snack-img{
@@ -42,6 +42,7 @@ button#dispense{
 	font: 30px Courier New;
 	text-decoration: none;
 	text-align: center;
+	float: left;
 }
 
 h1{
