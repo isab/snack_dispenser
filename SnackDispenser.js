@@ -60,14 +60,12 @@ function dispense(){
 			else if(ask == "N" || ask == "n"){
 				removeFromBag(snack);
 				chosen[snackIdx].style.borderColor = "white";
-				snackBag.pop(snack);
 				confirm("Click Dispense for a different snack!");
 			}
 			else {
 				window.alert("Invalid Answer. Dispense again.");
 				removeFromBag(snack);
 				chosen[snackIdx].style.borderColor = "white";
-				snackBag.pop(snack);
 			}
 		}
 	}
