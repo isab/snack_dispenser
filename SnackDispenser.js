@@ -63,12 +63,12 @@ function randomSnack(){
 }
 
 function displaySnack(snack){
-	var snackDisplay = document.getElementById("snackdisplay");
+	var snackDisplay = document.getElementById("snacknav");
     snackDisplay.appendChild(snack);
 }
 
 function removeSnack(snack){
-	var snackDisplay = document.getElementById("snackdisplay");
+	var snackDisplay = document.getElementById("snacknav");
     snackDisplay.removeChild(snack);
 }
 
