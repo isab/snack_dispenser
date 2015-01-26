@@ -43,10 +43,11 @@ body{
 }
 
 button#dispense{
+	color: #000000;
 	width: 100px;
 	height: 100px;
 	background: #ffffff;
-	font: 30px Courier New #000000;
+	font: 30px Courier New;
 	text-decoration: none;
 	text-align: center;
 }
@@ -56,16 +57,19 @@ h1{
 	font: 85px Courier New;
 	letter-spacing: 3pt;
 	border-bottom: 10px solid #9D669D;
-	top: 80px;
-	left: 250px;
+	margin-top: 80px;
+	margin-left: 250px;
 	width: 720;
 	position: absolute;
 	text-align: center;
 }
 
 h2{
+	color: #ffffff;
 	width: 100px;
 	margin: 0px;
 	background: #45B8C1;
-	font: 15px Courier New #ffffff;
+	font: 15px Courier New;
+	text-align: center;
+	text-decoration: none;
 }
