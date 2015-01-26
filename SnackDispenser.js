@@ -38,12 +38,7 @@ function dispense(){
 	var snack = snacks[snackIdx];
 
 	if(snackBag.length == 2){
-		if(snackBag[0] == snackBag[1]){
-			window.alert("You have TWO of the same snack. Only TWO snacks at a time!");
-		}
-		else{
-			window.alert("Only TWO snacks at a time!");
-		}
+		window.alert("Only TWO snacks at a time!");
 	}
 
 	else{
@@ -57,13 +52,13 @@ function dispense(){
 		else{
 			addToBag(snack);
 			var ask = prompt("Keep the snack? (Y/N)");
-			if(ask == "N"){
+			if(ask == "N" || ask == "n"){
 				removeFromBag(snack);
 				chosen[snackIdx].style.borderColor = "white";
 				snackBag.pop(snack);
 				confirm("Click Dispense for a different snack!");
 			}
-			if(ask != "Y" && ask != "N"){
+			if(ask != "Y" && ask != "N" && ask != "y" && ask != "n"){
 				window.alert("Invalid Answer. Dispense again.");
 				removeFromBag(snack);
 				chosen[snackIdx].style.borderColor = "white";
@@ -71,6 +66,7 @@ function dispense(){
 			}
 			chosen[snackIdx].style.borderColor = "white";
 			snackBag.push(snack);
+			snackStock[snackIdx]--;
 		}
 	}
 }
