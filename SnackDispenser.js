@@ -52,21 +52,23 @@ function dispense(){
 		else{
 			addToBag(snack);
 			var ask = prompt("Keep the snack? (Y/N)");
-			if(ask == "N" || ask == "n"){
+			if(ask == "Y" || ask == "y"){
+				chosen[snackIdx].style.borderColor = "white";
+				snackBag.push(snack);
+				snackStock[snackIdx]--;
+			}
+			else if(ask == "N" || ask == "n"){
 				removeFromBag(snack);
 				chosen[snackIdx].style.borderColor = "white";
 				snackBag.pop(snack);
 				confirm("Click Dispense for a different snack!");
 			}
-			if(ask != "Y" && ask != "N" && ask != "y" && ask != "n"){
+			else {
 				window.alert("Invalid Answer. Dispense again.");
 				removeFromBag(snack);
 				chosen[snackIdx].style.borderColor = "white";
 				snackBag.pop(snack);
 			}
-			chosen[snackIdx].style.borderColor = "white";
-			snackBag.push(snack);
-			snackStock[snackIdx]--;
 		}
 	}
 }
