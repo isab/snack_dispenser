@@ -57,6 +57,7 @@ function dispense(){
 		}
 		else if(keep == "No" || keep == "no"){
 			confirm("Want a different snack? Click reset then dispense to try again!");
+			snackdisplay[0].removeChild(snack);
 		}
 		else{
 			window.alert("Invalid Answer!");
