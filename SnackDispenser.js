@@ -51,14 +51,14 @@ function dispense(){
 		}
 		else{
 			addToBag(snack);
-			var confirm = prompt("Keep the snack? (Y/N)");
-			if(confirm == "N"){
+			var ask = prompt("Keep the snack? (Y/N)");
+			if(ask == "N"){
 				confirm("Click Dispense for a different snack!");
 				removeFromBag(snack);
 				chosen[snackIdx].style.borderColor = "white";
 				snackBag.pop(snack);
 			}
-			if(confirm != "Y" && confirm != "N"){
+			if(ask != "Y" && ask != "N"){
 				window.alert("Invalid Answer. Dispense again.");
 				removeFromBag(snack);
 				chosen[snackIdx].style.borderColor = "white";
