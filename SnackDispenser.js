@@ -36,10 +36,10 @@ function dispense(){
 	var snackIdx = randomSnack();
 	var snack = snacks[snackIdx];
 
-	var snackBag = document.getElementById("snackbag");
-
 	var snackDisplay = document.getElementById("snackdisplay");
     snackDisplay.appendChild(snack);
+
+   	var snackBag = document.getElementById("snackbag");
 
 	if(outOfStock(snackIdx)){
 		window.alert("Item is out of stock! Click dispense to try again!");
