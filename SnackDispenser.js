@@ -55,6 +55,7 @@ function dispense(){
 			removeFromBag(snack);
 			chosen[snackIdx].style.borderColor = "white";
 		}
+		chosen[snackIdx].style.borderColor = "white";
 	}
 }
 
