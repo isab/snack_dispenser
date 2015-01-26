@@ -64,7 +64,7 @@ function randomSnack(){
 
 function displaySnack(snack){
 	var snackDisplay = document.getElementById("snacknav");
-    snackDisplay.appendChild(snack);
+    snackDisplay.appendChild(snack.src);
 }
 
 function removeSnack(snack){
