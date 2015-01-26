@@ -36,7 +36,7 @@ function dispense(){
 	var snackIdx = randomSnack();
 	var snack = snacks[snackIdx];
 
-	var chosen = document.getElementsByClassName("snack-img");
+	var chosen = document.getElementsByClassName("snackreel");
 	chosen[0].style.borderColor = "black";
 
 	if(outOfStock(snackIdx)){
