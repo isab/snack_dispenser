@@ -33,10 +33,6 @@ function start(){
 	}
 }
 
-function reset(){
-	document.getElementById("snackdisplay").style.display= "none";
-}
-
 function dispense(){
 	var snackIdx = randomSnack();
 	var snack = snacks[snackIdx];
@@ -54,6 +50,7 @@ function dispense(){
 		}
 		else if(keep == "No" || keep == "no"){
 			confirm("Want a different snack? Click reset then despense to try again!");
+			dispense();
 		}
 		else{
 			window.alert("Invalid Answer!");
@@ -68,10 +65,10 @@ function randomSnack(){
 
 function outOfStock(idx){
 	if(snackStock[idx] == 0){
-		return false;
+		return true;
 	}
 	else{
-		return true;
+		return false;
 	}
 }
 
