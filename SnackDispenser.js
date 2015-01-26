@@ -55,6 +55,7 @@ function dispense(){
 			if(confirm == "N"){
 				removeFromBag(snack);
 				chosen[snackIdx].style.borderColor = "white";
+				snackBag.pop(snack);
 			}
 			if(confirm != "Y" && confirm != "N"){
 				window.alert("Invalid Answer. Dispense again.");
