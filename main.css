@@ -24,6 +24,12 @@ body{
 	position: absolute;
 }
 
+.snackdisplayclass{
+	background: #ffffff;
+	width: 100px;
+	height: 100px;
+}
+
 #snackreel{
 	top: 200px;
 	left: 400px;
@@ -47,7 +53,7 @@ h1{
 	border-bottom: 10px solid #9D669D;
 	top: 80px;
 	left: 260px;
-	width: 719;
+	width: 720;
 	position: absolute;
 	text-align: center;
 }

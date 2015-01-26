@@ -40,8 +40,8 @@ function reset(){
 function dispense(){
 	var snackIdx = randomSnack();
 	var snack = snacks[snackIdx];
-	var snackdisplay = document.getElementById("snackdisplay");
-    snackdisplay.appendChild(snack);
+	var snackdisplay = document.getElementsByClassName("snackdisplayclass");
+    snackdisplayclass.appendChild(snack);
 
 	if(outOfStock(snackIdx)){
 		window.alert("Item is out of stock! Click reset then dispense to try again!");
@@ -54,7 +54,6 @@ function dispense(){
 		}
 		else if(keep == "No" || keep == "no"){
 			confirm("Want a different snack? Click reset then dispense to try again!");
-			reset();
 		}
 		else{
 			window.alert("Invalid Answer!");
