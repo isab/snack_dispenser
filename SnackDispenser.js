@@ -40,8 +40,8 @@ function reset(){
 function dispense(){
 	var snackIdx = randomSnack();
 	var snack = snacks[snackIdx];
-	var snackdisplay = document.getElementsByClassName("snackdisplayclass");
-    snackdisplayclass.appendChild(snack);
+	var snackdisplay = document.getElementByID("snackdisplay");
+    snackdisplay.appendChild(snack);
 
 	if(outOfStock(snackIdx)){
 		window.alert("Item is out of stock! Click reset then dispense to try again!");
