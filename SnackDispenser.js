@@ -24,6 +24,7 @@ snacks[7] = new Image();
 snacks[7].src = 'imgs/pretzels.png';
 
 var snackStock = new Array(8);
+var snackBag = new Array(2);
 
 function start(){
     i = 8;
@@ -36,26 +37,33 @@ function dispense(){
 	var snackIdx = randomSnack();
 	var snack = snacks[snackIdx];
 
-	var chosen = document.getElementsByClassName("snack-img");
-	chosen[snackIdx].style.borderColor = "red";
-
-	if(outOfStock(snackIdx)){
-		window.alert("Item is out of stock! Click dispense to try again!");
-		chosen[snackIdx].style.borderColor = "white";
+	if(snackBag.length == 2){
+		window.alert("Only TWO snacks at a time!");
 	}
+
 	else{
-		addToBag(snack);
-		var confirm = prompt("Keep the snack? (Y/N)");
-		if(confirm == "N"){
-			removeFromBag(snack);
+		var chosen = document.getElementsByClassName("snack-img");
+		chosen[snackIdx].style.borderColor = "red";
+
+		if(outOfStock(snackIdx)){
+			window.alert("Item is out of stock! Click dispense to try again!");
 			chosen[snackIdx].style.borderColor = "white";
 		}
-		if(confirm != "Y" && confirm != "N"){
-			window.alert("Invalid Answer. Dispense again.");
-			removeFromBag(snack);
+		else{
+			addToBag(snack);
+			var confirm = prompt("Keep the snack? (Y/N)");
+			if(confirm == "N"){
+				removeFromBag(snack);
+				chosen[snackIdx].style.borderColor = "white";
+			}
+			if(confirm != "Y" && confirm != "N"){
+				window.alert("Invalid Answer. Dispense again.");
+				removeFromBag(snack);
+				chosen[snackIdx].style.borderColor = "white";
+			}
 			chosen[snackIdx].style.borderColor = "white";
+			snackBag.push(snack);
 		}
-		chosen[snackIdx].style.borderColor = "white";
 	}
 }
 
