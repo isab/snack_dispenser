@@ -41,16 +41,19 @@ function dispense(){
 
 	if(outOfStock(snackIdx)){
 		window.alert("Item is out of stock! Click dispense to try again!");
+		chosen[snackIdx].style.borderColor = "white";
 	}
 	else{
 		addToBag(snack);
 		var confirm = prompt("Keep the snack? (Y/N)");
 		if(confirm == "N"){
 			removeFromBag(snack);
+			chosen[snackIdx].style.borderColor = "white";
 		}
 		if(confirm != "Y" && confirm != "N"){
 			window.alert("Invalid Answer. Dispense again.");
 			removeFromBag(snack);
+			chosen[snackIdx].style.borderColor = "white";
 		}
 	}
 }
