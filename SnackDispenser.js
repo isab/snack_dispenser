@@ -39,7 +39,7 @@ function reset(){
 
 function dispense(){
 	var snackIdx = randomSnack();
-	var snack = snack[snackIdx];
+	var snack = snacks[snackIdx];
 	var snackdisplay = document.getElementById("snackdisplay");
     snackdisplay.appendChild(snack);
 
