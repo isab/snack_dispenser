@@ -40,7 +40,7 @@ function reset(){
 function dispense(){
 	var snackIdx = randomSnack();
 	var snack = snacks[snackIdx];
-	var snackdisplay = document.getElementByID("snackdisplay");
+	var snackdisplay = document.getElementById("snackdisplay");
     snackdisplay.appendChild(snack);
 
 	if(outOfStock(snackIdx)){
