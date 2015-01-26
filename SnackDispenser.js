@@ -24,7 +24,7 @@ snacks[7] = new Image();
 snacks[7].src = 'imgs/pretzels.png';
 
 var snackStock = new Array(8);
-var snackBag = new Array(2);
+var snackBag = [];
 
 function start(){
     i = 8;
