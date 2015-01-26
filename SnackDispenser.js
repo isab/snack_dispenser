@@ -51,7 +51,10 @@ function dispense(){
 		if(confirm == "N"){
 			snackBag.removeChild(snack);
 		}
-		snackDisplay[0].removeChild(snack);
+		if(confirm != "Y" && confirm != "N"){
+			window.alert("Invalid Answer. Dispense again.");
+			snackBag.removeChild(snack);
+		}
 	}
 }
 
