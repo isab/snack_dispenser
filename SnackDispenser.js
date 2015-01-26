@@ -29,7 +29,7 @@ var snackBag = [];
 function start(){
     i = 8;
 	while(i){
-   		snackStock[--i] = 2;
+   		snackStock[--i] = 1;
 	}
 }
 
