@@ -38,7 +38,12 @@ function dispense(){
 	var snack = snacks[snackIdx];
 
 	if(snackBag.length == 2){
-		window.alert("Only TWO snacks at a time!");
+		if(snackBag[0] == snackBag[1]){
+			window.alert("You have TWO of the same snack. Only TWO snacks at a time!");
+		}
+		else{
+			window.alert("Only TWO snacks at a time!");
+		}
 	}
 
 	else{
