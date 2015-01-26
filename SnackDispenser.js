@@ -47,12 +47,10 @@ function dispense(){
 		addToBag(snack);
 		var confirm = prompt("Keep the snack? (Y/N)");
 		if(confirm == "N"){
-			snackDisplay.removeChild(snack);
 			removeFromBag(snack);
 		}
 		if(confirm != "Y" && confirm != "N"){
 			window.alert("Invalid Answer. Dispense again.");
-			snackDisplay.removeChild(snack);
 			removeFromBag(snack);
 		}
 	}
