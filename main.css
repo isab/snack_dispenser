@@ -1,5 +1,5 @@
 body{
-	background: #435B70;
+	background-image: url('imgs/backgroundwood.png');
 	color: #000000;
 	font: 15px verdana;
 }
@@ -37,7 +37,7 @@ button#dispense{
 	width: 160px;
 	height: 80px;
 	margin-top: 220px;
-	margin-left: 200px;
+	margin-left: 250px;
 	background: #ffffff;
 	font: 30px Courier New;
 	text-decoration: none;
@@ -52,7 +52,7 @@ h1{
 	border-bottom: 10px solid #9D669D;
 	margin-top: 80px;
 	margin-left: 250px;
-	width: 720;
+	width: 780;
 	position: absolute;
 	text-align: center;
 }
@@ -62,7 +62,7 @@ h2{
 	width: 100px;
 	margin: 0px;
 	background: #45B8C1;
-	font: 15px Courier New;
+	font: 18px Courier New;
 	text-align: center;
 	text-decoration: none;
 }
