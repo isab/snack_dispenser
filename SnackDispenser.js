@@ -44,22 +44,19 @@ function dispense(){
 		snackDisplay.removeChild(snack);
 	}
 	else{
-		snackDisplay.removeChild(snack);
+		// var snackBag = document.getElementById("snackbag");
+		// snackBag.appendChild(snack);
+		var confirm = prompt("Keep the snack? (Y/N)");
+		if(confirm == "N"){
+			// snackBag.removeChild(snack);
+			snackDisplay.removeChild(snack);
+		}
+		if(confirm != "Y" && confirm != "N"){
+			window.alert("Invalid Answer. Dispense again.");
+			// snackBag.removeChild(snack);
+			snackDisplay.removeChild(snack);
+		}
 	}
-	// else{
-	// 	var snackBag = document.getElementById("snackbag");
-	// 	snackBag.appendChild(snack);
-	// 	var confirm = prompt("Keep the snack? (Y/N)");
-	// 	if(confirm == "N"){
-	// 		snackBag.removeChild(snack);
-	// 		snackDisplay.removeChild(snack);
-	// 	}
-	// 	if(confirm != "Y" && confirm != "N"){
-	// 		window.alert("Invalid Answer. Dispense again.");
-	// 		snackBag.removeChild(snack);
-	// 		snackDisplay.removeChild(snack);
-	// 	}
-	// }
 }
 
 function randomSnack(){
