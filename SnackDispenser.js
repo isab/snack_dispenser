@@ -51,8 +51,8 @@ function dispense(){
 		if(confirm == "N"){
 			snackBag.removeChild(snack);
 		}
+		snackDisplay[0].removeChild(snack);
 	}
-	snackDisplay[0].removeChild(snack);
 }
 
 function randomSnack(){
