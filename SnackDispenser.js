@@ -44,17 +44,16 @@ function dispense(){
 		snackDisplay.removeChild(snack);
 	}
 	else{
-		// var snackBag = document.getElementById("snackbag");
-		// snackBag.appendChild(snack);
+		addToBag(snack);
 		var confirm = prompt("Keep the snack? (Y/N)");
 		if(confirm == "N"){
-			// snackBag.removeChild(snack);
 			snackDisplay.removeChild(snack);
+			removeFromBag(snack);
 		}
 		if(confirm != "Y" && confirm != "N"){
 			window.alert("Invalid Answer. Dispense again.");
-			// snackBag.removeChild(snack);
 			snackDisplay.removeChild(snack);
+			removeFromBag(snack);
 		}
 	}
 }
@@ -62,6 +61,16 @@ function dispense(){
 function randomSnack(){
 	var snackIdx = Math.floor(Math.random()*7)
 	return snackIdx;
+}
+
+function addToBag(snack){
+	var snackBag = document.getElementById("snackbag");
+	snackBag.appendChild(snack);
+}
+
+function removeFromBag(snack){
+	var snackBag = document.getElementById("snackbag");
+	snackBag.removeChild(snack);
 }
 
 function outOfStock(idx){
