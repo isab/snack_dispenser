@@ -43,6 +43,9 @@ function dispense(){
 		window.alert("Item is out of stock! Click dispense to try again!");
 		snackDisplay.removeChild(snack);
 	}
+	else{
+		snackDisplay.removeChild(snack);
+	}
 	// else{
 	// 	var snackBag = document.getElementById("snackbag");
 	// 	snackBag.appendChild(snack);
