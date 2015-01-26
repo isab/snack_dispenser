@@ -31,14 +31,6 @@ body{
 	margin: 20px;
 }
 
-.snackdisplayclass{
-	background: #ffffff;
-	width: 100px;
-	height: 100px;
-	margin: 0px;
-	position: inherit;
-}
-
 #snackreel{
 	width: 420px;
 	height: 220px;
