@@ -36,22 +36,23 @@ function dispense(){
 	var snackIdx = randomSnack();
 	var snack = snacks[snackIdx];
 
-	var snackDisplay = document.getElementById("snackdisplay");
-    snackDisplay.appendChild(snack);
+	displaySnack(snack);
 
 	if(outOfStock(snackIdx)){
 		window.alert("Item is out of stock! Click dispense to try again!");
-		snackDisplay.removeChild(snack);
+		removeSnack(snack);
 	}
 	else{
 		addToBag(snack);
 		var confirm = prompt("Keep the snack? (Y/N)");
 		if(confirm == "N"){
 			removeFromBag(snack);
+			removeSnack(snack);
 		}
 		if(confirm != "Y" && confirm != "N"){
 			window.alert("Invalid Answer. Dispense again.");
 			removeFromBag(snack);
+			removeSnack(snack);
 		}
 	}
 }
@@ -59,6 +60,16 @@ function dispense(){
 function randomSnack(){
 	var snackIdx = Math.floor(Math.random()*7)
 	return snackIdx;
+}
+
+function displaySnack(snack){
+	var snackDisplay = document.getElementById("snackdisplay");
+    snackDisplay.appendChild(snack);
+}
+
+function removeSnack(snack){
+	var snackDisplay = document.getElementById("snackdisplay");
+    snackDisplay.removeChild(snack);
 }
 
 function addToBag(snack){
