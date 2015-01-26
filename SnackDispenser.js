@@ -33,17 +33,11 @@ function start(){
 	}
 }
 
-function reset(){
-	var displays = document.getElementsByClassName('snackdisplayclass');
-  	for (var i = 0; i < displays.length; i++) {
-    	displays[i].style.display = 'none';
-  	}
-}
-
 function dispense(){
 	var snackIdx = randomSnack();
 	var snack = snacks[snackIdx];
 	var snackdisplay = document.getElementsByClassName("snackdisplayclass");
+	snackdisplay[0].removeChild(snack);
     snackdisplay[0].appendChild(snack);
 
 	if(outOfStock(snackIdx)){
