@@ -23,15 +23,28 @@ snacks[6].src = 'imgs/pretz.png';
 snacks[7] = new Image();
 snacks[7].src = 'imgs/pretzels.png';
 
-var snackStock = [10, 10, 10, 10, 10, 10, 10, 10];
+var snackStock = new Array(8);
 var snackBag = [];
 
-function dispense(){
-	var idx = randomSnack();
-	var item = snacks[idx];
+function start(){
+    i = 8;
+	while(i){
+   		arr[--i] = 10;
+	}
+}
 
-	if(outOfStock(idx)){
-		window.alert("Item is out of stock. Try again!");
+function reset(){
+	document.getElementById("snackdisplay").style.display= "none";
+}
+
+function dispense(){
+	var snackIdx = randomSnack();
+	var snack = snack[snackIdx];
+	var snackdisplay = document.getElementById("snackdisplay");
+    snackdisplay.appendChild(snack.src);
+
+	if(outOfStock(snackIdx)){
+		window.alert("Item is out of stock! Click reset then dispense to try again!");
 	}
 	else{
 		var keep = prompt("Would you like to eat this yummy snack? Please answer Yes or No.");
@@ -40,19 +53,12 @@ function dispense(){
 			snackStock[idx]--;
 		}
 		else if(keep == "No" || keep == "no"){
-			window.alert("Click repick button to choose another snack!");
+			confirm("Want a different snack? Click reset then despense to try again!");
 		}
 		else{
 			window.alert("Invalid Answer!");
 		}
 	}
-	return item;
-}
-
-function showSnack(){
-	var snack = dispense();
-	var snackdisplay = document.getElementById("snackdisplay");
-    snackdisplay.appendChild(snack.src);
 }
 
 function randomSnack(){
