@@ -36,7 +36,7 @@ function dispense(){
 	var snackIdx = randomSnack();
 	var snack = snacks[snackIdx];
 	var snackBag = document.getElementById("snackbag");
-	
+
 	var snackDisplay = document.getElementsByClassName("snackdisplayclass");
     snackDisplay[0].appendChild(snack);
 
@@ -48,8 +48,8 @@ function dispense(){
 		var keep = prompt("Would you like to eat this yummy snack? Please answer Yes or No.");
 		if(keep == "Yes" || keep == "yes"){
 			snackStock[snackIdx]--;
-			snackBag.appendChild(snack);
 			snackDisplay[0].removeChild(snack);
+			snackBag.appendChild(snack);
 		}
 		else if(keep == "No" || keep == "no"){
 			confirm("Want a different snack? Click reset then dispense to try again!");
