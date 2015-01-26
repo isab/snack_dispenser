@@ -64,16 +64,6 @@ function randomSnack(){
 	return snackIdx;
 }
 
-function displaySnack(snack){
-	var snackDisplay = document.getElementById("snacknav");
-    snackDisplay.appendChild(snack);
-}
-
-function removeSnack(snack){
-	var snackDisplay = document.getElementById("snacknav");
-    snackDisplay.removeChild(snack);
-}
-
 function addToBag(snack){
 	var snackBag = document.getElementById("snackbag");
 	snackBag.appendChild(snack);
