@@ -10,19 +10,18 @@ body{
 	border: 5px solid #ffffff;
 	background: #45B8C1;
 	float: left;
-	margin-top: 200px;
+	margin-top: 50px;
 	margin-left: 250px;
 }
 
 #snackbag{
 	width: 100px;
-	height: 200px;
+	height: 220px;
 	border: 5px solid #45B8C1;
 	float: left;
-	margin-top: 200px;
+	margin-top: 50px;
 	margin-left: 20px;
 	background: #ffffff;
-	padding: 5px;
 }
 
 #snackreel{
@@ -31,7 +30,7 @@ body{
 	border: 5px solid #45B8C1;
 	background: #ffffff;
 	float: left;
-	margin-top: 200px;
+	margin-top: 50px;
 	margin-left: 20px;
 }
 
@@ -43,14 +42,30 @@ body{
 	white-space: nowrap;
 }
 
+button#dispense{
+	width: 100px;
+	height: 100px;
+	background: #ffffff;
+	font: 30px Courier New #000000;
+	text-decoration: none;
+	text-align: center;
+}
+
 h1{
 	color: #ffffff;
 	font: 85px Courier New;
 	letter-spacing: 3pt;
 	border-bottom: 10px solid #9D669D;
 	top: 80px;
-	left: 260px;
+	left: 250px;
 	width: 720;
 	position: absolute;
 	text-align: center;
+}
+
+h2{
+	width: 100px;
+	margin: 0px;
+	background: #45B8C1;
+	font: 15px Courier New #ffffff;
 }

@@ -46,13 +46,14 @@ function dispense(){
 		chosen[snackIdx].style.borderColor = "red";
 
 		if(outOfStock(snackIdx)){
-			window.alert("Item is out of stock! Click dispense to try again!");
+			window.alert("Item is out of stock! Click Dispense to try again!");
 			chosen[snackIdx].style.borderColor = "white";
 		}
 		else{
 			addToBag(snack);
 			var confirm = prompt("Keep the snack? (Y/N)");
 			if(confirm == "N"){
+				confirm("Click Dispense for a different snack!");
 				removeFromBag(snack);
 				chosen[snackIdx].style.borderColor = "white";
 				snackBag.pop(snack);
@@ -61,6 +62,7 @@ function dispense(){
 				window.alert("Invalid Answer. Dispense again.");
 				removeFromBag(snack);
 				chosen[snackIdx].style.borderColor = "white";
+				snackBag.pop(snack);
 			}
 			chosen[snackIdx].style.borderColor = "white";
 			snackBag.push(snack);
