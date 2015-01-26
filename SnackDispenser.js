@@ -36,8 +36,8 @@ function dispense(){
 	var snackIdx = randomSnack();
 	var snack = snacks[snackIdx];
 
-	var chosen = document.getElementById("snackreel");
-	chosen.style.borderColor = "black";
+	var chosen = document.getElementsByClassName("snack-img");
+	chosen[0].style.borderColor = "red";
 
 	if(outOfStock(snackIdx)){
 		window.alert("Item is out of stock! Click dispense to try again!");
