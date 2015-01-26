@@ -35,30 +35,24 @@ function start(){
 function dispense(){
 	var snackIdx = randomSnack();
 	var snack = snacks[snackIdx];
-	var snackBag = document.getElementById("snackbag");
 
 	var snackDisplay = document.getElementsByClassName("snackdisplayclass");
     snackDisplay[0].appendChild(snack);
 
 	if(outOfStock(snackIdx)){
-		window.alert("Item is out of stock! Click reset then dispense to try again!");
+		window.alert("Item is out of stock! Click dispense to try again!");
 		snackDisplay[0].removeChild(snack);
 	}
 	else{
-		var keep = prompt("Would you like to eat this yummy snack? Please answer Yes or No.");
-		if(keep == "Yes" || keep == "yes"){
-			snackStock[snackIdx]--;
-			snackDisplay[0].removeChild(snack);
-			snackBag.appendChild(snack);
-		}
-		else if(keep == "No" || keep == "no"){
-			confirm("Want a different snack? Click reset then dispense to try again!");
-			snackDisplay[0].removeChild(snack);
-		}
-		else{
-			window.alert("Invalid Answer!");
+		var snackBag = document.getElementById("snackbag");
+		snackBag.appendChild(snack);
+
+		var confirm = prompt("Keep the snack? (Y/N)");
+		if(confirm == "N"){
+			snackBag.removeChild(snack);
 		}
 	}
+	snackDisplay[0].removeChild(snack);
 }
 
 function randomSnack(){
