@@ -28,6 +28,8 @@ body{
 	background: #ffffff;
 	width: 100px;
 	height: 100px;
+	margin: 0px;
+	position: inherit;
 }
 
 #snackreel{

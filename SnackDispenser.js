@@ -29,12 +29,15 @@ var snackBag = [];
 function start(){
     i = 8;
 	while(i){
-   		arr[--i] = 10;
+   		snackStock[--i] = 2;
 	}
 }
 
 function reset(){
-	document.getElementsByClassName('snackdisplayclass').style.display= "none";
+	var displays = document.getElementsByClassName('snackdisplayclass');
+  	for (var i = 0; i < displays.length; i++) {
+    	displays[i].style.display = 'none';
+  	}
 }
 
 function dispense(){
@@ -49,8 +52,8 @@ function dispense(){
 	else{
 		var keep = prompt("Would you like to eat this yummy snack? Please answer Yes or No.");
 		if(keep == "Yes" || keep == "yes"){
-			snackBag.push(item);
-			snackStock[idx]--;
+			snackBag.push(snack);
+			snackStock[snackIdx]--;
 		}
 		else if(keep == "No" || keep == "no"){
 			confirm("Want a different snack? Click reset then dispense to try again!");
